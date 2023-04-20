@@ -8,7 +8,7 @@
 		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link rel="stylesheet" href="stylesTrabajaConNosotros.css">
 	<link rel="stylesheet" href="style.css">
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -17,7 +17,8 @@
 
 	<div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3">
 		<div class="toast-stack" role="alert" aria-live="assertive" aria-atomic="true">
-			<div class="toast toast1 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast1 t align-items-center toast-tipo-1" role="alert" aria-live="assertive"
+				aria-atomic="true">
 				<div class="d-flex">
 					<div class="toast-body toast-body1">
 						¡Hola Mundo! Este es un mensaje de toast.
@@ -26,7 +27,8 @@
 						aria-label="Close"></button>
 				</div>
 			</div>
-			<div class="toast toast2 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast2 t align-items-center toast-tipo-1" role="alert" aria-live="assertive"
+				aria-atomic="true">
 				<div class="d-flex">
 					<div class="toast-body toast-body2">
 						¡Hola Mundo! Este es un mensaje de toast.
@@ -35,7 +37,8 @@
 						aria-label="Close"></button>
 				</div>
 			</div>
-			<div class="toast toast3 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast3 t align-items-center toast-tipo-1" role="alert" aria-live="assertive"
+				aria-atomic="true">
 				<div class="d-flex">
 					<div class="toast-body toast-body3">
 						¡Hola Mundo! Este es un mensaje de toast.
@@ -44,7 +47,8 @@
 						aria-label="Close"></button>
 				</div>
 			</div>
-			<div class="toast toast4 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast4 t align-items-center toast-tipo-1" role="alert" aria-live="assertive"
+				aria-atomic="true">
 				<div class="d-flex">
 					<div class="toast-body toast-body4">
 						¡Hola Mundo! Este es un mensaje de toast.
@@ -53,7 +57,8 @@
 						aria-label="Close"></button>
 				</div>
 			</div>
-			<div class="toast toast5 t align-items-center toast-tipo-2" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast5 t align-items-center toast-tipo-2" role="alert" aria-live="assertive"
+				aria-atomic="true">
 				<div class="d-flex">
 					<div class="toast-body toast-body5">
 						¡Hola Mundo! Este es un mensaje de toast.
@@ -150,7 +155,7 @@
 				<input type="file" name="archivo" id="archivo" required><br>
 				<br>
 				<label>Comentario:</label>
-				<textarea name="comentario" id="comentario"></textarea><br>
+				<textarea name="comentario" id="comentarioT"></textarea><br>
 				<br><br>
 				<div class="row">
 					<div class="col-4">
@@ -158,7 +163,7 @@
 					</div>
 					<div class="col-4 offset-4">
 						<button type="button" class="btn btn-primary float-end w-50 align-items-end"
-							onclick="mostrarParte(4,3), guardarEnObjeto(), mostrarResumen()">Enviar</button>
+							onclick="mostrarParte(4,3),guardarEnObjeto(), mostrarResumen()">Enviar</button>
 					</div>
 				</div>
 

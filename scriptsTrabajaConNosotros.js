@@ -156,7 +156,7 @@ function guardarEnObjeto() {
 	var respuesta3 = $('input[name="pregunta3"]:checked').val();
 	var respuesta4 = $('input[name="pregunta4"]:checked').val();
 	var archivo = $("#archivo").val();
-	var comentario = $("#comentario").val();
+	var comentario = $("#comentarioT").val();
 
 	var formcv = {
 		nombre: nombre,
@@ -170,8 +170,9 @@ function guardarEnObjeto() {
 		comentario: comentario
 	};
 
-	console.log(formcv)
 	localStorage.setItem("formulario", JSON.stringify(formcv));
+
+	
 }
 
 
@@ -189,8 +190,23 @@ function mostrarResumen() {
 }
 
 function generarPDF(){
+	var datos = JSON.parse(localStorage.getItem("formulario"));
+	var doc = new jsPDF();
+
+	doc.text("Nombre: " + datos.nombre, 10, 10);
+	doc.text("Apellido: " + datos.apellido, 10, 20);
+	doc.text("Email: " + datos.email, 10, 30);
+	doc.text("Preguntas:", 10, 40);
+	doc.text("¿Tienes experiencia en desarrollo de software? " + datos.respuesta1, 20, 50);
+	doc.text("¿Estás familiarizado con metodologías ágiles como Scrum o Kanban? " + datos.respuesta2, 20, 60);
+	doc.text("¿Has trabajado con frameworks como React o Angular? " + datos.respuesta3, 20, 70);
+	doc.text("¿Estás familiarizado con herramientas de control de versiones como Git? " + datos.respuesta3, 20, 80);
+	doc.text("Ruta del texto: " + datos.archivo, 10, 90);
+	doc.text("Comentario: " + datos.comentario, 10, 100);
 	mostrarCorrecto("Guardamos tu solicitud. Gracias!")
-	//generar pdf
+	
+	doc.save("Solicitud.pdf");
+
 	setTimeout(function() {
 		window.location.href = "index.html";
 	  }, 3000);
