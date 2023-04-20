@@ -1,0 +1,7 @@
+.fondogris{
+    background-color: #E8E8E8;
+    height: 62vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

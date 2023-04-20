@@ -1,18 +1,501 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
-    asdasdasdas
+
+<body id="contenedor">
+    <nav id="inicio" class="container sec-navbar nav">
+        <div class="row fila">
+            <div class="navbar-header col-2">
+                <img src="./recursos/logo.png" alt="" class="img">
+            </div>
+            <div class="col-10 links">
+                <a class="navlink" href="#presentacion">Sobre Nosotros</a>
+                <a class="navlink" href="#equipo">Equipo</a>
+                <a class="navlink" href="#contacto">Contacto</a>
+                <a class="navlink" href="#clientes">Clientes</a>
+                <a class="navlink" href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="sec-principal">
+        <div class="container cont-pres col-6">
+            <h1 class="titulos">ReData</h1>
+            <p class="textos">Somos una empresa que se dedica a brindar soluciones innovadoras mediante el uso de
+                software y tecnología</p>
+        </div>
+    </section>
+
+    <section id="presentacion" class="sec-presentacion">
+        <div class="container cont-pres col-6">
+            <h1 class="titulos">Nosotros</h1>
+            <p class="textos">Somos una empresa líder en el desarrollo de software personalizado para empresas de
+                diversos sectores, desde pequeñas startups hasta grandes corporaciones. Nos enorgullecemos de ofrecer
+                soluciones a medida que satisfagan las necesidades únicas de cada uno de nuestros clientes.</p>
+        </div>
+    </section>
+
+    <section id="equipo" class="sec-equipo">
+        <div class="cont-pres">
+            <br>
+            <div>
+                <div class="container cont-equipo col-8">
+                    <h1 class="titulos">Equipo</h1>
+                    <p class="textos">Nuestro equipo de expertos en tecnología trabaja con las últimas herramientas y
+                        tecnologías para crear soluciones de software de alta calidad y escalables. nuestro equipo puede
+                        proporcionar una solución que se ajuste a sus necesidades.</p>
+                </div>
+                <br>
+                <div class="container carrusel col-8">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="img1" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombre1" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <h5 class="card-title text-center">Desarrollador</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="card-text textos">Front-end developer <i
+                                                        class="lab la-js-square"></i> <i class="lab la-react"></i></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="email1" class="card-text textos"></p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="card-text textos"><i class="lab la-facebook-f"></i> <i
+                                                        class="lab la-twitter mx-1"></i> <i
+                                                        class="lab la-instagram"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="img2" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombre2" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <h5 class="card-title text-center">Desarrollador</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="card-text textos">Back-end developer <i
+                                                        class="las la-database"></i> <i class="lab la-java"></i></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="email2" class="card-text textos"></p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="card-text textos"><i class="lab la-facebook-f"></i> <i
+                                                        class="lab la-twitter mx-1"></i> <i
+                                                        class="lab la-instagram"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="img3" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombre3" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <h5 class="card-title text-center">Diseñador</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="card-text textos">UX/UI <i class="lab la-figma"></i> <i
+                                                        class="lab la-adobe"></i></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="email3" class="card-text textos"></p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="card-text textos"><i class="lab la-facebook-f"></i> <i
+                                                        class="lab la-twitter mx-1"></i> <i
+                                                        class="lab la-instagram"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="img4" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombre4" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <h5 class="card-title text-center">Desarrollador</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="card-text textos">Front-end developer <i
+                                                        class="lab la-js-square"></i> <i class="lab la-react"></i></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="email4" class="card-text textos"></p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="card-text textos"><i class="lab la-facebook-f"></i> <i
+                                                        class="lab la-twitter mx-1"></i> <i
+                                                        class="lab la-instagram"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="img5" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombre5" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <h5 class="card-title text-center">Desarrollador</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="card-text textos">Back-end developer <i
+                                                        class="las la-database"></i> <i class="lab la-java"></i></p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="email5" class="card-text textos"></p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="card-text textos"><i class="lab la-facebook-f"></i> <i
+                                                        class="lab la-twitter mx-1"></i> <i
+                                                        class="lab la-instagram"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <section id="trabaja con nosotros" class="sec-trabaja">
+        <div class="container cont-trabajaconnosotros">
+            <p class="contenido m-0 me-1 textos">¿Quieres trabajar con nosotros?</p>
+            <button type="button" class="btn btn-primary btncv contenido ms-1">¡Envianos tu CV!</button>
+        </div>
+    </section>
+
+    <section id="contacto" class="sec-contacto">
+        <div class="container">
+            <form id="formulario-contacto">
+                <br>
+                <div class="container">
+                    <h1 class="text-center">Contactanos</h1>
+                    <p class="contenido m-0 me-1 textos">¿necesitas un desarrollo personalizado?</p>
+                    <p class="contenido m-0 me-1 textos">¡contactanos!</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="nombre">Nombre:</label>
+                            <br>
+                            <input type="text" id="nombre" name="nombre" class="w-100 form-control" required>
+                            <label for="apellido" class="">Apellido:</label>
+                            <br>
+                            <input type="text" id="apellido" name="apellido" class="w-100" required>
+                            <br>
+                            <label for="email">Correo electrónico:</label>
+                            <br>
+                            <input type="email" id="email" name="email" class="w-100" required>
+                            <br>
+                            <label for="mensaje">Mensaje:</label>
+                            <br>
+                            <textarea for="mensaje" id="mensaje" name="mensaje" class="w-100" required></textarea>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-primary float-end w-100 align-items-end"
+                                onclick="validateConsulta()">Enviar</button>
+                        </div>
+                        <div class="col-6">
+                            <div class="w-100">
+                                <img src="./recursos/consultaimg.jpg" alt=""
+                                    style="width: 100%; height: auto; max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </section>
+
+    <section id="clientes" class="sec-cliente">
+        <div class="cont-pres">
+            <br>
+            <div>
+                <div class="container cont-equipo col-8">
+                    <h1 class="titulos">Nuestos Clientes</h1>
+                    <p class="textos">Son el motor que nos impulsa a desarrollar software. Son quienes confían en
+                        nuestra capacidad para crear soluciones que satisfagan sus necesidades y nos brindan la
+                        oportunidad de demostrar nuestro valor.</p>
+                </div>
+
+                <br>
+                <div class="container carrusel col-8">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="imgc1" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombrec1" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <h5 class="card-title text-center">Excelente servicio</h5>
+                                            <p class="card-text text-center">Excelente servicio al cliente. Me sentí muy
+                                                bien atendida en todo momento y mis preguntas fueron respondidas con
+                                                rapidez.</p>
+                                            <p class="card-text textos stars"><i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star-half-alt"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="imgc2" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombrec2" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <h5 class="card-title text-center">Muy eficiente</h5>
+                                            <p class="card-text text-center">El servicio que recibí fue muy eficiente.
+                                                Mi problema se resolvió en un tiempo récord y me dejó muy satisfecho con
+                                                la experiencia.</p>
+                                            <p class="card-text textos stars"><i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i> <i
+                                                    class="las la-star"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="imgc3" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombrec3" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <h5 class="card-title text-center">Servicio Personalizado</h5>
+                                            <p class="card-text text-center">El servicio es muy personalizado a mis
+                                                necesidades. Se aseguraron de ofrecerme exactamente lo que estaba
+                                                buscando.</p>
+                                            <p class="card-text textos stars"><i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="imgc4" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombrec4" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <h5 class="card-title text-center">Calidad del servicio</h5>
+                                            <p class="card-text text-center">Me encanta la calidad del servicio. lo que
+                                                hizo que la experiencia fuera aún mejor.</p>
+                                            <p class="card-text textos stars"><i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item carouselestilo">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img id="imgc5" src="" class="card-img p-2" alt="Foto de equipo 1">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 id="nombrec5" class="text-center"><strong></strong></h3>
+                                            </div>
+                                            <h5 class="card-title text-center">Servicio es muy confiable</h5>
+                                            <p class="card-text text-center">El servicio es muy confiable. Siempre sé
+                                                que puedo contar con ellos para resolver cualquier problema.</p>
+                                            <p class="card-text textos stars"><i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i> <i
+                                                    class="las la-star"></i> <i class="las la-star"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+    </section>
+
+    <section class="sec-footer">
+        <br>
+        <div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8">
+                            <ul class="navbar-nav div-footer">
+                                <li class="nav-item me-3">
+                                    <a class="nav-link textos" href="#presentacion" style="font-size: 14px;">Sobre
+                                        Nosotros</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link textos" href="#equipo" style="font-size: 14px;">Equipo</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link textos" href="#contacto" style="font-size: 14px;">Contacto</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link textos" href="#clientes" style="font-size: 14px;">Clientes</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link textos" href="trabaja-con-nosotros.html"
+                                        style="font-size: 14px;">Trabaja con nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link textos" href="#inicio" style="font-size: 14px;">Terminos y
+                                        condiciones</a>
+                                </li>
+                        </div>
+                        <div class="row col-4 justify-content-end">
+                            <i class="lab la-facebook-f icon-color mx-2"></i>
+                            <i class="lab la-instagram icon-color mx-2"></i>
+                            <i class="lab la-linkedin-in icon-color mx-2"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center textos">
+                        <p style="font-size: 12px;">&copy; 2023 todos los derechos reservados - ReData</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <br>
+    </section>
+
+    <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast-stack" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast toast1 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body toast-body1">
+                        ¡Hola Mundo! Este es un mensaje de toast.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast toast2 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body toast-body2">
+                        ¡Hola Mundo! Este es un mensaje de toast.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast toast3 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body toast-body3">
+                        ¡Hola Mundo! Este es un mensaje de toast.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast toast4 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body toast-body4">
+                        ¡Hola Mundo! Este es un mensaje de toast.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast toast5 t align-items-center toast-tipo-2" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body toast-body5">
+                        ¡Hola Mundo! Este es un mensaje de toast.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 </body>
-</body>
+
 </html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet"
+		href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesTrabajaConNosotros.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+	<div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3">
+		<div class="toast-stack" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast toast1 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+				<div class="d-flex">
+					<div class="toast-body toast-body1">
+						¡Hola Mundo! Este es un mensaje de toast.
+					</div>
+					<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="toast toast2 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+				<div class="d-flex">
+					<div class="toast-body toast-body2">
+						¡Hola Mundo! Este es un mensaje de toast.
+					</div>
+					<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="toast toast3 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+				<div class="d-flex">
+					<div class="toast-body toast-body3">
+						¡Hola Mundo! Este es un mensaje de toast.
+					</div>
+					<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="toast toast4 t align-items-center toast-tipo-1" role="alert" aria-live="assertive" aria-atomic="true">
+				<div class="d-flex">
+					<div class="toast-body toast-body4">
+						¡Hola Mundo! Este es un mensaje de toast.
+					</div>
+					<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="toast toast5 t align-items-center toast-tipo-2" role="alert" aria-live="assertive" aria-atomic="true">
+				<div class="d-flex">
+					<div class="toast-body toast-body5">
+						¡Hola Mundo! Este es un mensaje de toast.
+					</div>
+					<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+						aria-label="Close"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<nav id="inicio" class="container sec-navbar nav">
+		<div class="row fila">
+			<div class="navbar-header col-2">
+				<img src="./recursos/logo.png" alt="" class="img">
+			</div>
+			<div class="col-10 links">
+				<a class="navlink" href="index.html#presentacion">Sobre Nosotros</a>
+				<a class="navlink" href="index.html#equipo">Equipo</a>
+				<a class="navlink" href="index.html#contacto">Contacto</a>
+				<a class="navlink" href="index.html#clientes">Clientes</a>
+				<a class="navlink" href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+			</div>
+		</div>
+	</nav>
+
+	<section class="fondogris">
+		<div id="parte-1" class="col-8">
+			<h2>Datos personales - 1/3</h2>
+			<form id="form-parte-1">
+				<label>Nombre:</label>
+				<input type="text" name="nombre" id="nombre" required><br>
+
+				<label>Apellido:</label>
+				<input type="text" name="apellido" id="apellido" required><br>
+
+				<label>Email:</label>
+				<input type="email" name="email" id="email" required><br>
+				<br>
+				<div class="row">
+					<div class="col-4">
+						<a href="index.html"><button type="button" class="btn btn-primary w-50">Volver</button></a>
+					</div>
+					<div class="col-4 offset-4">
+						<button type="button" class="btn btn-primary float-end w-50 align-items-end"
+							onclick="mostrarParte(2,1),validateFormParte1()">Siguiente</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<div id="parte-2" class="col-8" style="display: none;">
+			<h2>Preguntas de Sí o No - 2/3</h2>
+			<form id="form-parte-2">
+
+				<label>¿Tienes experiencia en desarrollo de software?</label><br>
+				<input type="radio" name="pregunta1" value="si" required> Sí
+				<input type="radio" name="pregunta1" value="no" required> No<br>
+
+				<label>¿Estás familiarizado con metodologías ágiles como Scrum o Kanban?</label><br>
+				<input type="radio" name="pregunta2" value="si" required> Sí
+				<input type="radio" name="pregunta2" value="no" required> No<br>
+
+				<label>¿Has trabajado con frameworks como React o Angular?</label><br>
+				<input type="radio" name="pregunta3" value="si" required> Sí
+				<input type="radio" name="pregunta3" value="no" required> No<br>
+
+				<label>¿Estás familiarizado con herramientas de control de versiones como Git?</label><br>
+				<input type="radio" name="pregunta4" value="si" required> Sí
+				<input type="radio" name="pregunta4" value="no" required> No<br>
+				<br>
+				<div class="row">
+					<div class="col-4">
+						<button type="button" class="btn btn-primary w-50" onclick="mostrarParte(1,2)">Volver</button>
+					</div>
+					<div class="col-4 offset-4">
+						<button type="button" class="btn btn-primary float-end w-50 align-items-end"
+							onclick="mostrarParte(3,2)">Siguiente</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<div id="parte-3" class="col-8" style="display: none;">
+			<h2>Subir archivo y comentario - 3/3</h2>
+			<form id="form-parte-3" enctype="multipart/form-data">
+				<label>Archivo:</label>
+				<input type="file" name="archivo" id="archivo" required><br>
+				<br>
+				<label>Comentario:</label>
+				<textarea name="comentario" id="comentario"></textarea><br>
+				<br><br>
+				<div class="row">
+					<div class="col-4">
+						<button type="button" class="btn btn-primary w-50" onclick="mostrarParte(2,3)">Volver</button>
+					</div>
+					<div class="col-4 offset-4">
+						<button type="button" class="btn btn-primary float-end w-50 align-items-end"
+							onclick="mostrarParte(4,3), guardarEnObjeto(), mostrarResumen()">Enviar</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<div id="parte-4" class="col-8" style="display: none;">
+			<div id="resumen">
+				<h2>Resumen del formulario</h2>
+				<div>
+					<span id="nombreR"></span>
+					<span id="correoR"></span>
+				</div>
+				<table>
+					<tbody>
+						<tr>
+							<td>¿Tienes experiencia en desarrollo de software? </td>
+							<td><span id="respuesta1R"></span></td>
+						</tr>
+						<tr>
+							<td>¿Estás familiarizado con metodologías ágiles como Scrum o Kanban? </td>
+							<td><span id="respuesta2R"></span></td>
+						</tr>
+						<tr>
+							<td>¿Has trabajado con frameworks como React o Angular? </td>
+							<td><span id="respuesta3R"></span></td>
+						</tr>
+						<tr>
+							<td>¿Estás familiarizado con herramientas de control de versiones como Git? </td>
+							<td><span id="respuesta4R"></span></td>
+						</tr>
+					</tbody>
+				</table>
+				<p><span id="archivoR"></span></p>
+				<p><span id="comentarioR"></span></p>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<button type="button" class="btn btn-primary w-50" onclick="mostrarParte(3,4)">Volver</button>
+				</div>
+				<div class="col-4 offset-4">
+					<button type="button" class="btn btn-primary w-50 float-end align-items-end"
+						onclick="generarPDF()">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sec-footer2">
+		<br>
+		<div>
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<ul class="navbar-nav div-footer">
+								<li class="nav-item me-3">
+									<a class="nav-link textos" href="index.html#presentacion"
+										style="font-size: 14px;">Sobre
+										Nosotros</a>
+								</li>
+								<li class="nav-item me-3">
+									<a class="nav-link textos" href="index.html#equipo"
+										style="font-size: 14px;">Equipo</a>
+								</li>
+								<li class="nav-item me-3">
+									<a class="nav-link textos" href="index.html#contacto"
+										style="font-size: 14px;">Contacto</a>
+								</li>
+								<li class="nav-item me-3">
+									<a class="nav-link textos" href="index.html#clientes"
+										style="font-size: 14px;">Clientes</a>
+								</li>
+								<li class="nav-item me-3">
+									<a class="nav-link textos" href="trabaja-con-nosotros.html"
+										style="font-size: 14px;">Trabaja con nosotros</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link textos" href="#inicio" style="font-size: 14px;">Terminos y
+										condiciones</a>
+								</li>
+						</div>
+						<div class="row col-4 justify-content-end">
+							<i class="lab la-facebook-f icon-color mx-2"></i>
+							<i class="lab la-instagram icon-color mx-2"></i>
+							<i class="lab la-linkedin-in icon-color mx-2"></i>
+						</div>
+					</div>
+					<hr>
+					<div class="text-center textos">
+						<p style="font-size: 12px;">&copy; 2023 todos los derechos reservados - ReData</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<br>
+	</section>
+
+
+
+	<script src="scriptsTrabajaConNosotros.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
